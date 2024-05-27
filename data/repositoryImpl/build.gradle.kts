@@ -9,4 +9,7 @@ android {
 dependencies {
     implementation(projects.domain.model)
     implementation(projects.domain.repository)
+    implementation(libs.serialization.json)
+    implementation(libs.bundles.okhttp)
+    implementation(libs.bundles.retrofit)
 }
