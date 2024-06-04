@@ -1,5 +1,6 @@
 package com.young.r2.compose.data.api
 
+import com.young.r2.compose.data.api.response.ProductInfoResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -13,7 +14,7 @@ interface ProductApiService {
         @Query("pageNo") pageNo: String = "1",
         @Query("numberOfRows") numberOfRows: String = "1",
         @Query("returnType") returnType: String = "json"
-    ) //TODO: 리턴 타입 추가 필요
+    ): ProductInfoResponse
 
     @GET("/B553748/CertImgListService/getCertImgListService")
     suspend fun getProjectInfoByProductReportNo(
@@ -22,6 +23,5 @@ interface ProductApiService {
         @Query("pageNo") pageNo: String = "1",
         @Query("numberOfRows") numberOfRows: String = "1",
         @Query("returnType") returnType: String = "json"
-    ) //TODO: 리턴타입 추가 필요
-
+    ): ProductInfoResponse
 }

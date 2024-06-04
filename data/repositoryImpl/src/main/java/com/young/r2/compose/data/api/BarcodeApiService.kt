@@ -1,5 +1,6 @@
 package com.young.r2.compose.data.api
 
+import com.young.r2.compose.data.api.response.BarcodeServiceResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -9,5 +10,5 @@ interface BarcodeApiService {
         @Path("serviceKey") serviceKey: String = "",
         @Path("returnType") returnType: String = "json",
         @Path("barcodeNo") barcodeNum: String
-    ) //TODO: 리턴 타입이 추가되어야함
+    ): BarcodeServiceResponse
 }

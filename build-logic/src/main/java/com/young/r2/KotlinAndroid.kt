@@ -9,7 +9,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 internal fun Project.configureKotlinAndroid() {
     // Plugins
-    pluginManager.apply("org.jetbrains.kotlin.android")
+    with(pluginManager) {
+        apply("org.jetbrains.kotlin.android")
+        apply("org.jetbrains.kotlin.plugin.parcelize")
+    }
 
     // Android settings
     androidExtension.apply {
