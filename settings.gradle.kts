@@ -33,3 +33,4 @@ include(
     ":feature:product"
 )
 include(":buildsrc")
+include(":data:api")

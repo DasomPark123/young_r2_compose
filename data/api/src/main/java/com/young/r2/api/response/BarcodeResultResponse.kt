@@ -1,4 +1,4 @@
-package com.young.r2.compose.data.api.response
+package com.young.r2.api.response
 
 import com.google.gson.annotations.SerializedName
 

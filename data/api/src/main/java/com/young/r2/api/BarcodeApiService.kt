@@ -1,6 +1,6 @@
-package com.young.r2.compose.data.api
+package com.young.r2.api
 
-import com.young.r2.compose.data.api.response.BarcodeServiceResponse
+import com.young.r2.api.response.BarcodeServiceResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 
