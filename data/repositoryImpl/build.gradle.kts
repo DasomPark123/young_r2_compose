@@ -7,7 +7,9 @@ android {
 }
 
 dependencies {
+    implementation(projects.data.api)
     implementation(projects.domain.model)
     implementation(projects.domain.repository)
+
     implementation(libs.serialization.json)
 }
