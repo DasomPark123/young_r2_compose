@@ -1,6 +1,6 @@
-package com.young.r2.api
+package com.young.r2.compose.api
 
-import com.young.r2.api.response.ProductInfoResponse
+import com.young.r2.compose.api.response.ProductInfoResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

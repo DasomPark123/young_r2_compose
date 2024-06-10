@@ -1,4 +1,4 @@
-package com.young.r2.api.response
+package com.young.r2.compose.api.response
 
 import com.google.gson.annotations.SerializedName
 
@@ -8,7 +8,7 @@ data class BarcodeInfoResponse(
     val totalCount: String = "",
 
     @SerializedName("row")
-    val row: List<BarcodeListItemResponse> = listOf(),
+    val row: List<BarcodeItemResponse> = listOf(),
 
     @SerializedName("RESULT")
     val result: BarcodeResultResponse = BarcodeResultResponse()

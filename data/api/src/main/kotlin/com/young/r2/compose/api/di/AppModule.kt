@@ -1,8 +1,8 @@
-package com.young.r2.api.di
+package com.young.r2.compose.api.di
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import com.young.r2.api.BarcodeApiService
-import com.young.r2.api.ProductApiService
+import com.young.r2.compose.api.BarcodeApiService
+import com.young.r2.compose.api.ProductApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -42,21 +42,21 @@ internal object AppModule {
 
     @Singleton
     @Provides
-    fun provideProductApi(okHttpClient: OkHttpClient, convertJson: Converter.Factory): com.young.r2.api.ProductApiService {
+    fun provideProductApi(okHttpClient: OkHttpClient, convertJson: Converter.Factory): ProductApiService {
         return Retrofit.Builder()
             .baseUrl("http://apis.data.go.kr")
             .addConverterFactory(convertJson)
             .client(okHttpClient).build()
-            .create(com.young.r2.api.ProductApiService::class.java)
+            .create(ProductApiService::class.java)
     }
 
     @Singleton
     @Provides
-    fun provideBarcodeApi(okHttpClient: OkHttpClient, convertJson: Converter.Factory): com.young.r2.api.BarcodeApiService {
+    fun provideBarcodeApi(okHttpClient: OkHttpClient, convertJson: Converter.Factory): BarcodeApiService {
         return Retrofit.Builder()
             .baseUrl("https://openapi.foodsafetykorea.go.kr")
             .addConverterFactory(convertJson)
             .client(okHttpClient).build()
-            .create(com.young.r2.api.BarcodeApiService::class.java)
+            .create(BarcodeApiService::class.java)
     }
 }

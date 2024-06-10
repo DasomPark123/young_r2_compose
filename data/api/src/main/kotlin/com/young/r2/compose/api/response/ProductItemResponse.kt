@@ -1,11 +1,11 @@
-package com.young.r2.api.response
+package com.young.r2.compose.api.response
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class ProductListItemResponse(
+data class ProductItemResponse(
 
     @SerializedName("allergy")
     val allergy: String = "",

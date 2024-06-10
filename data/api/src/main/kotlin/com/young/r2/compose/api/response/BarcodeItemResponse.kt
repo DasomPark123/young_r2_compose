@@ -1,8 +1,8 @@
-package com.young.r2.api.response
+package com.young.r2.compose.api.response
 
 import com.google.gson.annotations.SerializedName
 
-data class BarcodeListItemResponse(
+data class BarcodeItemResponse(
 
     @SerializedName("CLSBIZ_DT")
     val closedBusinessData: String = "",

@@ -1,11 +1,11 @@
-package com.young.r2.api.response
+package com.young.r2.compose.api.response
 
 import com.google.gson.annotations.SerializedName
 
 data class ProductInfoResponse(
 
     @SerializedName("list")
-    val list: List<ProductListItemResponse> = listOf(),
+    val list: List<ProductItemResponse> = listOf(),
 
     @SerializedName("totalCount")
     val totalCount: String = "",
