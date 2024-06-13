@@ -1,5 +1,7 @@
 package com.young.r2.compose.core.common
 
+import java.util.regex.Pattern
+
 fun removeKorean(string: String) : String {
     val regex = "[\\uAC00-\\uD7A3]".toRegex()
     return string.replace(regex, "")

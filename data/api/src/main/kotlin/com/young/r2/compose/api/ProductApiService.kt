@@ -8,9 +8,9 @@ interface ProductApiService {
     //TODO : api 하나로 처리할 수 있을지 고민이 필요하다
 
     @GET("/B553748/CertImgListService/getCertImgListService")
-    suspend fun getProductInfoBuProductName(
+    suspend fun getProductInfoByProductName(
         @Query("ServiceKey") serviceKey: String = "",
-        @Query("prdlstNm") prdlsNm: String,
+        @Query("prdlstNm") productListName: String,
         @Query("pageNo") pageNo: String = "1",
         @Query("numberOfRows") numberOfRows: String = "1",
         @Query("returnType") returnType: String = "json"
@@ -19,7 +19,7 @@ interface ProductApiService {
     @GET("/B553748/CertImgListService/getCertImgListService")
     suspend fun getProjectInfoByProductReportNo(
         @Query("ServiceKey") serviceKey: String = "",
-        @Query("prdlstReportNo") prdlstReportNo: String,
+        @Query("prdlstReportNo") productListReportNo: String,
         @Query("pageNo") pageNo: String = "1",
         @Query("numberOfRows") numberOfRows: String = "1",
         @Query("returnType") returnType: String = "json"
