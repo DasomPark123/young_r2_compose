@@ -11,7 +11,7 @@ import javax.inject.Inject
 class ProductRepositoryImpl @Inject constructor(
     private val productInfoApi: ProductApiService
 ): ProductRepository {
-    override suspend fun getProductInfoListByProductName(product: String): NetworkFetcher<ProductInfo> {
+    override suspend fun getProductInfoByProductName(product: String): NetworkFetcher<ProductInfo> {
         return safeCall {
             productInfoApi.getProductInfoByProductName(productListName = product).toData()
         }
