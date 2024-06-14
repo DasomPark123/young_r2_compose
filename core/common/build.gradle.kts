@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.young.r2.common"
 }
+
+dependencies {
+    implementation(libs.bundles.lifecycle)
+}

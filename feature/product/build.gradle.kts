@@ -5,3 +5,7 @@ plugins {
 android {
     namespace = "com.young.r2.product"
 }
+
+dependencies {
+    implementation(projects.domain.repository)
+}
