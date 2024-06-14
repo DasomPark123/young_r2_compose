@@ -7,7 +7,7 @@ import com.young.r2.compose.core.common.removeKorean
 import com.young.r2.compose.domain.model.product.ProductInfo
 import com.young.r2.compose.domain.model.product.ProductItem
 
-internal fun ProductInfoResponse.toData(): ProductInfo =
+fun ProductInfoResponse.toData(): ProductInfo =
     ProductInfo(
         list = this.list.toData(),
         totalCount = totalCount,

@@ -9,7 +9,7 @@ import com.young.r2.compose.domain.model.barcode.BarcodeItem
 import com.young.r2.compose.domain.model.barcode.BarcodeResult
 import com.young.r2.compose.domain.model.barcode.BarcodeService
 
-internal fun BarcodeServiceResponse.toData(): BarcodeService =
+fun BarcodeServiceResponse.toData(): BarcodeService =
     BarcodeService(
         barcodeInfo = this.C005.toData()
     )
