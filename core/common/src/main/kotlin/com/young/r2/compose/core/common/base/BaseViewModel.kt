@@ -9,8 +9,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlin.coroutines.CoroutineContext
 
 interface ViewState
+interface ViewEvent
 
-abstract class BaseViewModel<UiState: ViewState>: ViewModel(), CoroutineScope {
+abstract class BaseViewModel<UiState: ViewState, Event: ViewEvent>: ViewModel(), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
         get() = viewModelScope.coroutineContext

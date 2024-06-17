@@ -10,7 +10,10 @@ import javax.inject.Inject
 class ProductViewModel @Inject constructor(
     private val getProductInfoByProductNameUseCase: GetProductInfoByProductNameUseCase,
     private val getProductInfoByReportNoUseCase: GetProductInfoByReportNoUseCase
-): BaseViewModel<ProductContract.State>() {
+): BaseViewModel<ProductContract.State, ProductContract.Event>() {
+
+    init { initializeState() }
+
     override fun setInitialState(): ProductContract.State {
         TODO("Not yet implemented")
     }

@@ -9,7 +9,7 @@ interface ProductApiService {
 
     @GET("/B553748/CertImgListService/getCertImgListService")
     suspend fun getProductInfoByProductName(
-        @Query("ServiceKey") serviceKey: String = "",
+        @Query("ServiceKey") serviceKey: String = "",  //TODO : api key를 local.property에 정의하고 사용해야함
         @Query("prdlstNm") productListName: String,
         @Query("pageNo") pageNo: String = "1",
         @Query("numberOfRows") numberOfRows: String = "1",
@@ -18,7 +18,7 @@ interface ProductApiService {
 
     @GET("/B553748/CertImgListService/getCertImgListService")
     suspend fun getProjectInfoByProductReportNo(
-        @Query("ServiceKey") serviceKey: String = "",
+        @Query("ServiceKey") serviceKey: String = "",  //TODO : api key를 local.property에 정의하고 사용해야함
         @Query("prdlstReportNo") productListReportNo: String,
         @Query("pageNo") pageNo: String = "1",
         @Query("numberOfRows") numberOfRows: String = "1",

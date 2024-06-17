@@ -1,14 +1,16 @@
 package com.young.r2.compose.feature.product
 
+import com.young.r2.compose.core.common.base.ViewEvent
 import com.young.r2.compose.core.common.base.ViewState
+import com.young.r2.compose.domain.model.product.ProductInfo
 
 class ProductContract {
+
     data class State(
-        //TODO: 데이터 추가 필요
+        val productInfo: ProductInfo
     ): ViewState
 
-    //TODO: ViewEvent 정의 필요
     sealed class Event: ViewEvent {
-
+        //TODO: 추가 예정
     }
 }
