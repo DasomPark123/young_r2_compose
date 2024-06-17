@@ -10,6 +10,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
 
+//TODO: 순환참조 발생으로 di는 모듈을 따로 빼야할듯..
 @Module
 @InstallIn(ViewModelComponent::class) //TODO: @Bind인 경우에도 ViewModelComponent로 사용해도 상관없을까..?
 internal abstract class RepositoryModule {
