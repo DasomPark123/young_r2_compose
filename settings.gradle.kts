@@ -33,3 +33,5 @@ include(
     ":feature:product"
 )
 include(":buildsrc")
+include(":di")
+include(":data:model")
