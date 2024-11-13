@@ -7,6 +7,6 @@ android {
 }
 
 dependencies {
-    implementation(projects.domain.model)
+    implementation(projects.data.model)
     implementation(projects.domain.repository)
 }

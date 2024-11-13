@@ -9,3 +9,5 @@ plugins {
 configureKotlinAndroid()
 configureHiltAndroid()
 configureKotest()
+
+//TODO: 필요한 플러그인인가??

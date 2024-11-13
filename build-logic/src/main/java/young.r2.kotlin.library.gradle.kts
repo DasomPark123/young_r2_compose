@@ -7,3 +7,5 @@ plugins {
 
 configureKotlin()
 configureKotest()
+
+//TODO: 이것도 필요한지 잘 모르겠다
