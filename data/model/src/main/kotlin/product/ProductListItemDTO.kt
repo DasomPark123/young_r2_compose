@@ -1,6 +1,10 @@
+package product
+
 import com.google.gson.annotations.SerializedName
 import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ProductListItemDTO(
     @SerializedName("allergy")
     val allergy: String,
@@ -46,4 +50,4 @@ data class ProductListItemDTO(
 
     @SerializedName("seller")
     val seller: String
-)
+): Parcelable
