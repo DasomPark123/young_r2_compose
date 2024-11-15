@@ -10,9 +10,9 @@ data class BarcodeInfoDTO(
 
     @SerializedName("row")
     @Expose
-    val row : List<BarcodeLIstItemDTO>,
+    val row : List<BarcodeListItemDTO>,
 
     @SerializedName("RESULT")
     @Expose
-    val result : ResultDTO
+    val result : BarcodeResultDTO
 )

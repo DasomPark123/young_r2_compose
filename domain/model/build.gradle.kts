@@ -1,5 +1,6 @@
 plugins {
     id("young.r2.android.library")
+    id("kotlin-parcelize")
 }
 
 android {

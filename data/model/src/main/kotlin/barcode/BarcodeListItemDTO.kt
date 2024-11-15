@@ -3,7 +3,7 @@ package barcode
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class BarcodeLIstItemDTO(
+data class BarcodeListItemDTO(
     @SerializedName("CLSBIZ_DT")
     @Expose
     val closedBusinessData : String,
