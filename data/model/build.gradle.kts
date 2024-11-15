@@ -10,4 +10,6 @@ android {
 
 dependencies {
     implementation(projects.data.repositoryImpl)
+    implementation(projects.domain.model)
+    implementation(projects.core.common)
 }
