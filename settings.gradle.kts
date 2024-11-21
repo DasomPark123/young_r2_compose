@@ -35,3 +35,4 @@ include(
 include(":buildsrc")
 include(":di")
 include(":data:model")
+include(":data:api")

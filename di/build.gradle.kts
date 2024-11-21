@@ -9,4 +9,6 @@ android {
 
 dependencies {
     implementation(projects.core.common)
+    implementation(projects.domain.repository)
+    implementation(projects.data.repositoryImpl)
 }

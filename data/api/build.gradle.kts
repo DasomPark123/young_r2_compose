@@ -1,14 +1,13 @@
 plugins {
     id("young.r2.android.library")
     id("young.r2.android.network")
-    id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.young.r2.model"
+    namespace = "com.young.r2.api"
 }
 
 dependencies {
-    implementation(projects.domain.model)
+    implementation(projects.data.model)
     implementation(projects.core.common)
 }

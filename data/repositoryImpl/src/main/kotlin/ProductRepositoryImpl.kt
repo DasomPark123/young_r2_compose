@@ -1,0 +1,2 @@
+class ProductRepositoryImpl: ProductRepository {
+}
