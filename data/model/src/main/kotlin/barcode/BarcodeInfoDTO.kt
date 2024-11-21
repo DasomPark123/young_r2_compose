@@ -6,11 +6,11 @@ import com.google.gson.annotations.SerializedName
 data class BarcodeInfoDTO(
     @SerializedName("total_count")
     @Expose
-    val totalCount : String,
+    val totalCount : String = "",
 
     @SerializedName("row")
     @Expose
-    val row : List<BarcodeListItemDTO>,
+    val row : List<BarcodeListItemDTO> = listOf(),
 
     @SerializedName("RESULT")
     @Expose

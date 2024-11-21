@@ -10,21 +10,21 @@ data class ProductInfoDTO(
 
     @SerializedName("totalCount")
     @Expose
-    val totalCount: String,
+    val totalCount: String = "",
 
     @SerializedName("pageNo")
     @Expose
-    val pageNo: String,
+    val pageNo: String = "",
 
     @SerializedName("resultCode")
     @Expose
-    val resultCode: String,
+    val resultCode: String = "",
 
     @SerializedName("resultMessage")
     @Expose
-    val resultMessage: String,
+    val resultMessage: String = "",
 
     @SerializedName("numOfRows")
     @Expose
-    val numOfRows: String
+    val numOfRows: String = ""
 )

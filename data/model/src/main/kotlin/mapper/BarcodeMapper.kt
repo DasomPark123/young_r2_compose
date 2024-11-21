@@ -30,6 +30,8 @@ class BarcodeMapper {
     }
 
     private fun List<BarcodeListItemDTO>.toBarcodeListItem(): List<BarcodeListItem> {
+        if (this.isEmpty()) return listOf()
+
         val parsedList: ArrayList<BarcodeListItem> = ArrayList()
         for (barcodeItem in this) {
             val parsedBarcodeItem = BarcodeListItem(

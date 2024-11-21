@@ -6,9 +6,9 @@ import com.google.gson.annotations.SerializedName
 data class BarcodeResultDTO(
     @SerializedName("MSG")
     @Expose
-    val msg : String,
+    val msg : String = "",
 
     @SerializedName("CODE")
     @Expose
-    val code : String
+    val code : String = ""
 )

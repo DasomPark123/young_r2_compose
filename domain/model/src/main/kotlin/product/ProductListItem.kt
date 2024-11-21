@@ -9,7 +9,7 @@ data class ProductListItem(
     var product : String = "알수없음",
     var seller : String = "알수없음",
     var imageUrl : String = "알수없음",
-    var total_content : String = "알수없음",
+    var totalContent : String = "알수없음",
     var calorie : String = "-",
     var carbohydrate : String = "-",
     var sugars : String = "-",
