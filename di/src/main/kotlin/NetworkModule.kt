@@ -44,11 +44,29 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(baseUrl: String, jsonConvertor: Json, okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofitBuilder(jsonConvertor: Json, okHttpClient: OkHttpClient): Retrofit.Builder {
         return Retrofit.Builder()
-            .baseUrl(baseUrl)
             .addConverterFactory(jsonConvertor.asConverterFactory("application/json".toMediaTypeOrNull()!!))
             .client(okHttpClient)
+    }
+
+    @Singleton
+    @Provides
+    fun provideProductApi(builder: Retrofit.Builder): ProductApi {
+        val retrofit = builder
+            .baseUrl(Common.PRODUCT_BASE_URL)
             .build()
+
+        return retrofit.create(ProductApi::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideBarcodeApi(builder: Retrofit.Builder): BarcodeApi {
+        val retrofit = builder
+            .baseUrl(Common.BARCODE_BASE_URL)
+            .build()
+
+        return retrofit.create(BarcodeApi::class.java)
     }
 }

@@ -31,12 +31,12 @@ class ProductMapper {
             parsedProductInfo.seller = productInfo.manufacture.split(" ", "/", "_", ",")[0]
             parsedProductInfo.imageUrl = productInfo.imgurl1
             if (productInfo.capacity.contains("(")) {
-                parsedProductInfo.total_content =
+                parsedProductInfo.totalContent =
                     productInfo.capacity.substring(0, productInfo.capacity.indexOf("("))
                 parsedProductInfo.calorie =
                     productInfo.capacity.findWordBetweenBracket().replace(">", "")
             } else {
-                parsedProductInfo.total_content = productInfo.capacity.replace(">", "")
+                parsedProductInfo.totalContent = productInfo.capacity.replace(">", "")
             }
 
             if (productInfo.nutrient.isNotEmpty() && productInfo.nutrient != UNKNOWN) {
